@@ -1,0 +1,84 @@
+/* sage lemon style */
+$background-color: #fff9e6;
+$header-nav-color: #000;
+$header-nav-background-color: #dce8a6;
+$header-nav-hover-color: #abdcc9;
+$header-nav-selected-color: #000;
+/* color hex codes 
+teal: #abdcc9;
+lemon: #fce48e;
+sage: #dce8a6;
+other thing: #fff1c2;
+*/
+html, body, ul, ol {
+    margin:0;
+    padding:0;
+}
+
+/* HTML 5 elements render as block */
+header, footer, aside, nav, article {
+    display:block;
+}
+
+body {
+    margin:0 auto;
+    width:940px;
+    font: 16px Helvetica, Arial, sans-serif;
+    background:$background-color;
+}
+
+h2 {
+    font-size:28px;
+    line-height:44px;
+    padding:12px 0;
+}
+
+h3 {
+    font-size:18px;
+    line-height: 22px;
+    padding:11px 0;
+}
+
+p {
+    padding-bottom:16px;
+}
+
+/* header style */
+header {
+    margin-bottom: 66px;
+    nav {
+	position:absolute;
+	left:0;
+	width:100%;
+	ul {
+	    margin: 0 auto;
+	    width:940px;
+	    list-style:none;
+
+	    li {
+		float: left;
+		background:$header-nav-background-color;
+		a {
+		    display:block;
+		    margin-right:20px;
+		    width: 125px;
+		    font-size:14px;
+		    line-height:44px;
+		    text-align:center;
+		    text-decoration:none;
+		    color: $header-nav-color;
+		    &:hover {
+			color: $header-nav-hover-color;
+		    }
+		}
+		&:selected {
+		    a {
+			color: $header-nav-selected-color;
+		    }
+		}
+	    }
+	}
+    }
+}
+
+/* footer style */

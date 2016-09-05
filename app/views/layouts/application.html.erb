@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Wedsite</title>
+    <meta charset="utf-8">
+    <title>Jon and Kaitlyn</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +10,26 @@
   </head>
 
   <body>
+    <header>
+      <h1>Jon and Kaitlyn are getting married!</h1>
+      <nav>
+	<ul>
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">RSVP</a></li>
+	  <li><a href="#">Registry</a></li>
+	  <li><a href="#">Photos</a></li>
+	  <li><a href="#">Hotel</a></li>
+	  <li><a href="#">FAQ</a></li>
+	</ul>
+      </nav>
+      
+    </header>
+    
     <%= yield %>
+
+    <footer>
+      <small>&copy; Jon Richmond</small>
+    </footer>
+    
   </body>
 </html>
