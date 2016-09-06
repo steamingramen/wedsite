@@ -14,12 +14,11 @@
       <h1>Jon and Kaitlyn are getting married!</h1>
       <nav>
 	<ul>
-	  <li><a href="#">Home</a></li>
-	  <li><a href="#">RSVP</a></li>
-	  <li><a href="#">Registry</a></li>
-	  <li><a href="#">Photos</a></li>
-	  <li><a href="#">Hotel</a></li>
-	  <li><a href="#">FAQ</a></li>
+	  <li><%= link_to 'Home', root_path %></li>
+	  <li><%= link_to 'RSVP', rsvps_path %></li>
+	  <li><%= link_to 'Registry', registries_path %></li>
+	  <li><%= link_to 'Photos', photos_path %></li>
+	  <li><%= link_to 'FAQ', faqs_path %></li>
 	</ul>
       </nav>
       
