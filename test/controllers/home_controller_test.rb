@@ -1,9 +1,10 @@
-require 'test_helper'
+require "rails_helper"
 
-class HomeControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
-    get home_index_url
-    assert_response :success
+Rspec.describe HomeController, type: :controller do
+  describe "GET #index" do
+    it "responds successfully" do
+      get :index
+      expect(response).to be_success
+    end
   end
-
 end
