@@ -1,2 +1,23 @@
-<h1>Rsvp#new</h1>
-<p>Find me in app/views/rsvp/new.html.erb</p>
+<% provide(:title, 'RSVP') %>
+<h2>RSVP</h2>
+
+<div>
+  <%= form_for @rsvp, url: {action: "create"}, html: {class: "rsvp_form"} do |f| %>
+  <%= render 'shared/error_messages' %>
+  
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+
+  <%= f.label :adult_count %>
+  <%= f.text_field :adult_count %>
+
+  <%= f.label :child_count %>
+  <%= f.text_field :child_count %>
+
+  <%= f.submit "Submit RSVP" %>
+  <% end %>
+</div>
+

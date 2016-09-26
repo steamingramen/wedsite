@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160922034158) do
+ActiveRecord::Schema.define(version: 20160926014059) do
 
   create_table "rsvps", force: :cascade do |t|
     t.string   "name"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20160922034158) do
     t.integer  "child_count"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.index ["email"], name: "index_rsvps_on_email", unique: true
   end
 
 end
