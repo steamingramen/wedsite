@@ -1,3 +1,17 @@
 // Place all the styles related to the rsvp controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.rsvp_form {
+    padding: 5px 30px;
+    div.input_group {
+	padding: 5px 0px;
+	label {
+	    width: 200px;
+	    display: inline-block;
+	}
+	input {
+	    width: 200px;
+	}
+    }
+}

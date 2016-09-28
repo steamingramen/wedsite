@@ -4,6 +4,7 @@ class RsvpController < ApplicationController
 
   def new
     @rsvp = Rsvp.new
+    @rsvp.guests.build
   end
 
   def create

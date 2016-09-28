@@ -10,15 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160926014059) do
+ActiveRecord::Schema.define(version: 20160928033052) do
+
+  create_table "guests", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.boolean  "adult"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "rsvps_id"
+    t.index ["rsvps_id"], name: "index_guests_on_rsvps_id"
+  end
 
   create_table "rsvps", force: :cascade do |t|
-    t.string   "name"
     t.string   "email"
-    t.integer  "adult_count"
-    t.integer  "child_count"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["email"], name: "index_rsvps_on_email", unique: true
   end
 

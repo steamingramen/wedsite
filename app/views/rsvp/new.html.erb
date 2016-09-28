@@ -4,19 +4,21 @@
 <div>
   <%= form_for @rsvp, url: {action: "create"}, html: {class: "rsvp_form"} do |f| %>
   <%= render 'shared/error_messages' %>
-  
-  <%= f.label :name %>
-  <%= f.text_field :name %>
 
+  <div class="input_group">
   <%= f.label :email %>
   <%= f.text_field :email %>
+  </div>
 
-  <%= f.label :adult_count %>
-  <%= f.text_field :adult_count %>
+  <div id="guests">
+    <%= render partial: 'guest', collection: @rsvp.guests %>
+  </div>
 
-  <%= f.label :child_count %>
-  <%= f.text_field :child_count %>
-
+  <div id="add_guest_link">
+    <%= add_guest_link "Add a guest" %>
+  </div>
+    
+  
   <%= f.submit "Submit RSVP" %>
   <% end %>
 </div>
