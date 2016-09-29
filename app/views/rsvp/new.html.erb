@@ -11,7 +11,18 @@
   </div>
 
   <div id="guests">
-    <%= render partial: 'guest', collection: @rsvp.guests %>
+    <ul>
+      <%= f.fields_for :guests do |guest_form| %>
+      <li>
+	<%= guest_form.check_box :_destroy %>
+	<%= guest_form.label :name %>
+	<%= guest_form.text_field :name %>
+
+	<%= guest_form.label :adult, "Is this guest over 21?" %>
+	<%= guest_form.check_box :adult %>
+      </li>
+      <% end %>
+    </ul>
   </div>
 
   <div id="add_guest_link">
