@@ -11,6 +11,7 @@
   </div>
 
   <div id="guests">
+    Guests:
     <ul>
       <%= f.fields_for :guests do |guest_form| %>
       <li>
@@ -24,11 +25,6 @@
       <% end %>
     </ul>
   </div>
-
-  <div id="add_guest_link">
-    <%= add_guest_link "Add a guest" %>
-  </div>
-    
   
   <%= f.submit "Submit RSVP" %>
   <% end %>

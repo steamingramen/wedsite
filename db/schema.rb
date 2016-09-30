@@ -13,12 +13,12 @@
 ActiveRecord::Schema.define(version: 20160928033052) do
 
   create_table "guests", force: :cascade do |t|
-    t.string   "name",       null: false
+    t.integer  "rsvp_id"
+    t.string   "name"
     t.boolean  "adult"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "rsvps_id"
-    t.index ["rsvps_id"], name: "index_guests_on_rsvps_id"
+    t.index ["rsvp_id"], name: "index_guests_on_rsvp_id"
   end
 
   create_table "rsvps", force: :cascade do |t|
