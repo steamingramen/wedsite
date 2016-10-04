@@ -1,7 +1,8 @@
 class Rsvp < ApplicationRecord
   has_many :guests, inverse_of: :rsvp
 
-  accepts_nested_attributes_for :guests, allow_destroy: true
+  accepts_nested_attributes_for :guests, reject_if: lambda { |attributes|
+    attributes['name'].blank? }
 
   before_save { self.email = email.downcase }
   

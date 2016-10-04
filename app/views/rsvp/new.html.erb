@@ -15,7 +15,6 @@
     <ul>
       <%= f.fields_for :guests do |guest_form| %>
       <li>
-	<%= guest_form.check_box :_destroy %>
 	<%= guest_form.label :name %>
 	<%= guest_form.text_field :name %>
 
