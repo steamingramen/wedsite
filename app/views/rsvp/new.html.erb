@@ -4,23 +4,42 @@
 <div>
   <%= form_for @rsvp, url: {action: "create"}, html: {class: "rsvp_form"} do |f| %>
   <%= render 'shared/error_messages' %>
-
+  <% @rsvp.guests.each do |guest| %>
+  <% if guest.primary %>
+  <%= f.fields_for :guests, guest do |guest_form| %>
+  <div class = "input_group" %>
+    <%= guest_form.label :name %>
+    <%= guest_form.text_field :name %>
+    <%= guest_form.hidden_field :adult %>
+    <%= guest_form.hidden_field :primary %>
+  </div>
+  <% end %>
+  <% end %>
+  <% end %>
   <div class="input_group">
   <%= f.label :email %>
   <%= f.text_field :email %>
+  </div>
+  <div class="input_group">
+  <%= f.label :attending, "Are you attending the wedding?" %>
+  <%= f.select :attending, [["Yes, I'm coming!", true], ["I'm sorry, I can't.", false]] %>
   </div>
 
   <div id="guests">
     Guests:
     <ul>
-      <%= f.fields_for :guests do |guest_form| %>
+      <% @rsvp.guests.each do |second_guest| %>
+      <% unless second_guest.primary %>
+      <%= f.fields_for :guests, second_guest do |second_guest_form| %>
       <li>
-	<%= guest_form.label :name %>
-	<%= guest_form.text_field :name %>
+	<%= second_guest_form.label :name %>
+	<%= second_guest_form.text_field :name %>
 
-	<%= guest_form.label :adult, "Is this guest over 21?" %>
-	<%= guest_form.check_box :adult %>
+	<%= second_guest_form.label :adult, "Is this guest over 21?" %>
+	<%= second_guest_form.check_box :adult %>
       </li>
+      <% end %>
+      <% end %>
       <% end %>
     </ul>
   </div>

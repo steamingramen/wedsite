@@ -4,7 +4,8 @@ class RsvpController < ApplicationController
 
   def new
     @rsvp = Rsvp.new
-    6.times { @rsvp.guests.build }
+    @primary_guest = @rsvp.guests.build adult: true, primary: true
+    @secondary_guests = 6.times { @rsvp.guests.build }
   end
 
   def create
@@ -12,12 +13,12 @@ class RsvpController < ApplicationController
     if @rsvp.save
       redirect_to rsvps_url(@rsvp)
     else
-      render 'new'
+      render :new
     end
   end
 
   private
   def rsvp_params
-    params.require(:rsvp).permit(:email, guests_attributes: [:id, :name, :adult, :_destroy])
+    params.require(:rsvp).permit(:email, :attending, guests_attributes: [:id, :name, :adult, :primary])
   end
 end

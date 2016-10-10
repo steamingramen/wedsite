@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160928033052) do
+ActiveRecord::Schema.define(version: 20161010022200) do
 
   create_table "guests", force: :cascade do |t|
     t.integer  "rsvp_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160928033052) do
     t.boolean  "adult"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "primary"
     t.index ["rsvp_id"], name: "index_guests_on_rsvp_id"
   end
 
@@ -25,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160928033052) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "attending"
     t.index ["email"], name: "index_rsvps_on_email", unique: true
   end
 
