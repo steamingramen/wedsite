@@ -10,9 +10,21 @@ lemon: #fce48e;
 sage: #dce8a6;
 other thing: #fff1c2;
 */
+
+
+
 html, body, ul, ol {
     margin:0;
     padding:0;
+}
+
+html {
+    /* background image */
+    background: url(Monet.png) no-repeat center center fixed;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
 }
 
 /* HTML 5 elements render as block */
@@ -21,10 +33,17 @@ header, footer, aside, nav, article {
 }
 
 body {
-    margin:0 auto;
-    width:940px;
     font: 16px Helvetica, Arial, sans-serif;
+    opacity: 0.7;
+    height:100%;
+}
+
+body div.content {
+    opacity: 1;
     background:$background-color;
+    width:940px;
+    margin:0 auto;
+    padding:10px;
 }
 
 h2 {
@@ -58,10 +77,11 @@ header {
 	    li {
 		float: left;
 		background:$header-nav-background-color;
+		width: 20%;
 		a {
 		    display:block;
 		    margin-right:20px;
-		    width: 125px;
+		    /* width: 20%; */
 		    font-size:14px;
 		    line-height:44px;
 		    text-align:center;
