@@ -1,4 +1,5 @@
 <h2>Photos</h2>
+<p>Photos by Tracy Smith Photography: <a href="https://www.photosbytracysmith.com" target="_blank">www.photosbytracysmith.com</a></p>
 <% @images.each do |photo| %>
 <div class="photo-container">
   <%= image_tag "photos/#{photo.split('/').last}", class: "photo" %>
