@@ -79,6 +79,18 @@ p {
     }
 }
 
+.photo-container {
+    padding: 8px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+	width: 100%;
+	height: auto;
+    }
+}
+
+
 /* header style */
 header {
     margin-bottom: 66px;
