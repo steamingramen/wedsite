@@ -72,6 +72,14 @@ p {
     }
 }
 
+.image-container {
+    img {
+	display: block;
+	margin-right: auto;
+	margin-left: 0px;
+    }
+}
+
 .registry {
     padding-bottom: 16px;
     .registry-button {
