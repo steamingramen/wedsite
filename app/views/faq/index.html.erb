@@ -1,2 +1,29 @@
-<h1>Faq#index</h1>
-<p>Find me in app/views/faq/index.html.erb</p>
+<h2>FAQs</h2>
+<div class="faq">
+  <div class="question">Where is the wedding going to be?</div>
+  <div class="answer">The ceremony and reception will both be at the Ann Arbor City Club. Please see the <%= link_to 'home page', root_path %> for info and directions.</div>
+</div>
+<div class="faq">
+  <div class="question">How can I get from the hotel to the wedding and back?</div>
+  <div class="answer">A shuttle service will run from the Holiday Inn on Plymouth Road in Ann Arbor to the Club both before and after the wedding. It is about 5 miles from the hotel to the venue. You are also welcome to drive yourself to the City Club. Parking is available on the front and side of the building.</div>
+</div>
+
+<div class="faq">
+  <div class="question">Is there a block of rooms that are reserved for wedding guests?</div>
+  <div class="answer">Yes! We have a hotel block booked at the Holiday Inn on Plymouth Rd. For more information please check out our <%= link_to 'Hotels', hotels_path %> page</div>
+</div>
+
+<div class="faq">
+  <div class="question">When should I book my hotel room?</div>
+  <div class="answer">As soon as possible! Whether or not you are reserving in the group block, we have been told that we are sharing our wedding weekend with several conferences and events also booked in the Ann Arbor area.</div>
+</div>
+
+<div class="faq">
+  <div class="question">What last name will Jon and Kaitlyn be using after the wedding?</div>
+  <div class="answer">Both of us have decided to keep our last names.</div>
+</div>
+
+<div class="faq">
+  <div class="question">What should I do if I have other questions?</div>
+  <div class="answer">Please feel free to email us at <%= mail_to "ksjr8517@gmail.com", "ksjr8517@gmail.com" %> with any wedding-related questions</div>
+</div>
