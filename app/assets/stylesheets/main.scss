@@ -1,5 +1,5 @@
 /* sage lemon style */
-$background-color: #fff9e6;
+$background-color: rgba(255, 249, 230, 0.7);
 $header-nav-color: #000;
 $header-nav-background-color: #dce8a6;
 $header-nav-hover-color: #abdcc9;
@@ -34,12 +34,10 @@ header, footer, aside, nav, article {
 
 body {
     font: 16px Helvetica, Arial, sans-serif;
-    opacity: 0.7;
     height:100%;
 }
 
 body div.content {
-    opacity: 1;
     background:$background-color;
     width:940px;
     margin:0 auto;
