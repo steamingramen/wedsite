@@ -22,3 +22,6 @@
 
 # Ignore website planning documents
 /plan/*
+
+# Ignore DS Store Files (becuase we don't like them)
+.DS_Store
