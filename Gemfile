@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-#ruby=ruby-2.3.0
+#ruby=ruby-2.7.2
 #ruby-gemset=wedsite
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
